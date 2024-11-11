@@ -47,3 +47,7 @@ import pandas as pd
 > `DataFrame` - **表**；`Series` - **列**。
 
 ![df_elections.png (1292×650) (ds100.org)](https://ds100.org/course-notes/pandas_1/images/df_elections.png)
+
+> **直接输入 `elections`**：Jupyter Notebook 会自动渲染 DataFrame，并以表格形式美观地显示出来，包括样式、列宽调整等。这种显示方式由 Notebook 环境优化。
+>
+> **使用 `print(elections)`**：`print()` 输出 DataFrame 时，会以纯文本格式显示，没有优化的样式。列对齐、行限制等方面可能也会有所不同，看起来不如 Jupyter Notebook 渲染的表格美观。
