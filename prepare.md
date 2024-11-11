@@ -18,3 +18,18 @@
 
 **Textbook** ([www.textbook.ds100.org](http://www.textbook.ds100.org))Supplemental reading (not 100% synchronized with the class schedule).
 
+
+
+学习到的主题：
+
+- `pandas` and `NumPy`
+- Exploratory Data Analysis
+- Regular Expressions
+- Visualization
+- Sampling
+- Model Design and Loss Formulation
+- Linear Regression
+- Gradient Descent
+- Logistic Regression
+- Clustering
+- PCA
