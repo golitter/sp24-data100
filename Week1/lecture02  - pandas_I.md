@@ -24,4 +24,15 @@ Notes: [Principles and Techniques of Data Science - 2 Pandas I (ds100.org)](http
 
 `pandas` 支持数据的格式化、条件筛选、运算和矢量化操作等功能，帮助数据科学家快速获取数据见解。
 
+导入库：
+
+```python
+import pandas as pd
+```
+
+
+
 > 使用的数据集：[sp24-student/lecture/lec02/data/elections.csv at main · DS-100/sp24-student (github.com)](https://github.com/DS-100/sp24-student/blob/main/lecture/lec02/data/elections.csv)
+
+# Series, DataFrames, and Indices
+
