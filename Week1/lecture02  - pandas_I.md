@@ -53,3 +53,12 @@ import pandas as pd
 > **使用 `print(elections)`**：`print()` 输出 DataFrame 时，会以纯文本格式显示，没有优化的样式。列对齐、行限制等方面可能也会有所不同，看起来不如 Jupyter Notebook 渲染的表格美观。
 
 **慎用`inplace=True`**，使用时需要时刻注意。
+
+> 当使用`inplace=True`时，设置索引列后，再次使用`inplace=True`恢复默认列，此时与最开始相同。但是当再次使用`inplace=True`时，默认索引列`index`将不再是默认列，转而是`level_0`...
+>
+> 没有确切把握不要使用`inplace=True`。
+
+# Data extraction with loc, iloc, and []
+
+- loc：基于标签：[number, string]
+- iloc：基于基数：[number, number]
