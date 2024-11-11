@@ -20,6 +20,14 @@
 
 
 
+
+
+**resources**：[DS-100/sp24-student (github.com)](https://github.com/DS-100/sp24-student) / [UC Berkeley Data 100 (github.com)](https://github.com/DS-100)
+
+> [UCB Data100: Principles and Techniques of Data Science - CS自学指南 (csdiy.wiki)](https://csdiy.wiki/数据科学/Data100/#_2)
+
+
+
 学习到的主题：
 
 - `pandas` and `NumPy`
