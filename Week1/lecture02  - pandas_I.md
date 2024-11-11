@@ -36,3 +36,14 @@ import pandas as pd
 
 # Series, DataFrames, and Indices
 
+在`pandas`中有三种基本的数据结构：
+
+`Series`：1D带标签数组数据；最好将其视为列数据。
+
+`DataFrame`：具有行和列的2D表格数据。
+
+`Index`：行/列标签的序列。
+
+> `DataFrame` - **表**；`Series` - **列**。
+
+![df_elections.png (1292×650) (ds100.org)](https://ds100.org/course-notes/pandas_1/images/df_elections.png)
