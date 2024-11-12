@@ -150,3 +150,37 @@ babynames.drop('Length', axis= 'columns')
 
 > 默认是创建副本，使用`inplace=True`才是在原来基础上删除。
 
+## 内置函数
+
+- `shape`：查看数据框的形状，以 `(行数, 列数)` 的元组形式显示。
+
+- `size`：获取数据框中元素的总数（行数 × 列数）。
+
+- `describe()`：生成数据框的统计摘要信息，包括计数、均值、标准差、最小值、四分位数和最大值。
+
+- `sample()`：随机抽取数据框中的样本行，可以指定抽样数量，以便进行数据探索或抽样分析。
+
+- `unique()`：获取指定列的唯一值列表，用于查看数据的去重值。
+
+  ```python
+  babynames['Name'].unique()
+  ```
+
+  
+
+- `sort_values()`：按指定列排序数据，可以升序或降序排列，常用于数据整理。
+
+  ```python
+  # 按名字进行排序，降序
+  babynames.sort_values(by='Name', ascending=False)
+  ```
+
+  
+
+- `value_counts()`：统计每个唯一值的出现次数，常用于分析分类数据的分布情况。
+
+  ```python
+  babynames['Name'].value_counts()
+  ```
+
+  
