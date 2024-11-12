@@ -119,3 +119,34 @@ babynames[ (babynames['Name'] == 'Bella') |
 
 ## 增删改
 
+### 增
+
+#### 增加一列
+
+1. **使用 `[]` 引用新列**：通过 `DataFrame['新列名']` 方式来引用新列。
+
+2. **赋值**：将这列赋值为一个适当长度的 `Series` 或 `数组`，即与现有行数相同的长度。
+
+```python
+babyname_len = babynames['Name'].str.len()
+babynames['babyname_len'] = babyname_len
+babynames
+```
+
+### 改列名
+
+使用`rename()`进行改名：
+
+```python
+babynames = babynames.rename(columns={'babyname_len':'Length'})
+babynames
+```
+
+### 删除列
+
+```python
+babynames.drop('Length', axis= 'columns')
+```
+
+> 默认是创建副本，使用`inplace=True`才是在原来基础上删除。
+
