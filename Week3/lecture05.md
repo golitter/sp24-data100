@@ -19,5 +19,63 @@ EDA中的关键属性：
 通常更倾向于使用矩形数据进行数据分析。矩形结构的数据易于操作和分析。数据清洗的一个重要方面就是将数据转换为更接近矩形的结构。矩形数据有两种类型：**表格和矩阵**。
 
 - 表格包含具有不同数据类型的命名列，并使用数据转换语言进行操作。
-
+- `csv`：记录行用换行符，字段用逗号分隔。
 - 矩阵包含同一类型的数值数据，并使用线性代数进行操作。
+
+
+
+希望表头不是第零行：
+
+```python
+tb_df = pd.read_csv('./data/cdc_tuberculosis.csv', header=1)
+tb_df.head()
+```
+
+重命名列：
+
+```python
+rename_dict = {'2019': 'TB cases 2019',
+               '2020': 'TB cases 2020',
+               '2021': 'TB cases 2021',
+               '2019.1': 'TB incidence 2019',
+               '2020.1': 'TB incidence 2020',
+               '2021.1': 'TB incidence 2021'}
+tb_df = tb_df.rename(columns=rename_dict)
+```
+
+# **Granularity**
+
+```python
+tb_df.drop(0)
+tb_df.drop(0).sum()
+```
+
+发现，本应该是数值类型，但是是字符串类型。
+
+```python
+tb_df.dtypes
+```
+
+> 原因，`csv`文件中的total行内的数值类型带引号，所以哪些行被识别为字符串类型。
+
+`thousands` 参数的作用是指定分隔数字中千位分隔符的符号。例如，如果数字是用逗号（`,`）分隔千位的（如 `1,000`），通过指定 `thousands=','`，`pandas` 可以正确地解析这些数字为整数或浮点数。
+
+```python
+tb_df = (
+    pd.read_csv('./data/cdc_tuberculosis.csv',
+        header = 1,
+        thousands = ',',
+    )
+.rename(columns=rename_dict)
+)
+
+tb_df
+
+```
+
+> 建议使用链式范式实现，更加直观
+>
+> 声明变量时，不能换行，但是可以用`()`，这样就可以进行换行。
+>
+> Python 允许在 **小括号**、**中括号**、**大括号**内的代码块自动换行，而无需显式使用反斜杠 (`\`)。
+
